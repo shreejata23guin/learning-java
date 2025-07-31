@@ -1,7 +1,9 @@
 ☕ Java Practice 
+
 This repo tracks my Java learning journey.
 
 ✅ Topics Covered
+
 Basic syntax & variables
 
 if-else, switch, loops
