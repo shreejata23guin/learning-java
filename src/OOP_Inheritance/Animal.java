@@ -5,7 +5,7 @@ public class Animal {
     //constructor
     Animal(String name){
         this.name=name;
-        System.out.println("Animal constructor caleed");
+        System.out.println("Animal constructor called");
     }
 
     void makeSound(){
