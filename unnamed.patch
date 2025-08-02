@@ -1,0 +1,213 @@
+Index: src/calculatorExample/SimpleCalculator.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/calculatorExample/SimpleCalculator.java b/src/calculatorExample/SimpleCalculator.java
+deleted file mode 100644
+--- a/src/calculatorExample/SimpleCalculator.java	(revision 9b4652e7f400eacf196165ccff4a1ae60184fc93)
++++ /dev/null	(revision 9b4652e7f400eacf196165ccff4a1ae60184fc93)
+@@ -1,65 +0,0 @@
+-import java.util.Scanner;
+-
+-public class SimpleCalculator {
+-
+-    // Method to add two numbers
+-    static double add(double a, double b) {
+-        return a + b;
+-    }
+-
+-    // Method to subtract two numbers
+-    static double subtract(double a, double b) {
+-        return a - b;
+-    }
+-
+-    // Method to multiply two numbers
+-    static double multiply(double a, double b) {
+-        return a * b;
+-    }
+-
+-    // Method to divide two numbers
+-    static double divide(double a, double b) {
+-        if (b == 0) {
+-            System.out.println("Cannot divide by zero!");
+-            return 0;
+-        }
+-        return a / b;
+-    }
+-
+-    public static void main(String[] args) {
+-        Scanner input = new Scanner(System.in);
+-
+-        System.out.print("Enter first number: ");
+-        double num1 = input.nextDouble();  // take first number
+-
+-        System.out.print("Enter second number: ");
+-        double num2 = input.nextDouble();  // take second number
+-
+-        System.out.print("Choose operation (+, -, *, /): ");
+-        char operator = input.next().charAt(0);  // take operator symbol
+-
+-        double result;
+-
+-        switch (operator) {
+-            case '+':
+-                result = add(num1, num2);
+-                break;
+-            case '-':
+-                result = subtract(num1, num2);
+-                break;
+-            case '*':
+-                result = multiply(num1, num2);
+-                break;
+-            case '/':
+-                result = divide(num1, num2);
+-                break;
+-            default:
+-                System.out.println("Invalid operator!");
+-                return;  // exit program
+-        }
+-
+-        System.out.println("Result: " + result);
+-
+-        input.close();  // close scanner
+-    }
+-}
+Index: src/methodExamples/MethodWithParameters.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/methodExamples/MethodWithParameters.java b/src/methodExamples/MethodWithParameters.java
+deleted file mode 100644
+--- a/src/methodExamples/MethodWithParameters.java	(revision 9b4652e7f400eacf196165ccff4a1ae60184fc93)
++++ /dev/null	(revision 9b4652e7f400eacf196165ccff4a1ae60184fc93)
+@@ -1,11 +0,0 @@
+-package methodExamples;
+-
+-public class MethodWithParameters {
+-    static void greetUser(String name){
+-        System.out.println("Hello,"+name+"!");
+-    }
+-    public static void main(String[] args){
+-        greetUser("Shreejata");
+-        greetUser("Apu");
+-    }
+-}
+Index: src/methodExamples/MethodWithReturn.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/methodExamples/MethodWithReturn.java b/src/methodExamples/MethodWithReturn.java
+deleted file mode 100644
+--- a/src/methodExamples/MethodWithReturn.java	(revision 9b4652e7f400eacf196165ccff4a1ae60184fc93)
++++ /dev/null	(revision 9b4652e7f400eacf196165ccff4a1ae60184fc93)
+@@ -1,11 +0,0 @@
+-package methodExamples;
+-
+-public class MethodWithReturn {
+-    static int add(int a,int b){
+-        return a+b;
+-    }
+-    public static void main(String[] args){
+-        int result= add(5,7);
+-        System.out.println("Sum:"+result);
+-    }
+-}
+Index: src/methodExamples/SimpleMethodExample.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/methodExamples/SimpleMethodExample.java b/src/methodExamples/SimpleMethodExample.java
+deleted file mode 100644
+--- a/src/methodExamples/SimpleMethodExample.java	(revision 9b4652e7f400eacf196165ccff4a1ae60184fc93)
++++ /dev/null	(revision 9b4652e7f400eacf196165ccff4a1ae60184fc93)
+@@ -1,15 +0,0 @@
+-public class SimpleMethodExample {
+-    //s is a method
+-    static void greet() {
+-        System.out.println("Hello! Welcome to Java methods");
+-    }
+-    public static void main(String[] args){
+-        greet();
+-        greet();
+-    }
+-}
+-//static void greet() → Method named greet, doesn't return anything.
+-//
+-//        System.out.println(...) → Code inside the method.
+-//
+-//greet(); → Calls the method.
+\ No newline at end of file
+Index: src/switchExamples/DaySwitchExample.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/switchExamples/DaySwitchExample.java b/src/switchExamples/DaySwitchExample.java
+deleted file mode 100644
+--- a/src/switchExamples/DaySwitchExample.java	(revision 9b4652e7f400eacf196165ccff4a1ae60184fc93)
++++ /dev/null	(revision 9b4652e7f400eacf196165ccff4a1ae60184fc93)
+@@ -1,59 +0,0 @@
+-package switchExamples;
+-
+-import java.util.Scanner;
+-
+-public class DaySwitchExample {
+-    public static void main(String[] args){
+-        Scanner input= new Scanner(System.in);
+-
+-        System.out.print("Enter a number(1 to 7):");
+-        int day= input.nextInt();
+-        switch (day){
+-            case 1:
+-                System.out.println("Monday");
+-                break;
+-            case 2:
+-                System.out.println("Tuesday");
+-                break;
+-            case 3:
+-                System.out.println("Wednesday");
+-            case 4:
+-                System.out.println("Thursday");
+-                break;
+-            case 5:
+-                System.out.println("Friday");
+-                break;
+-            case 6:
+-                System.out.println("Saturday");
+-                break;
+-            case 7:
+-                System.out.println("Sunday");
+-                break;
+-            default:
+-                System.out.println("Invalid number! Enter between 1 and 7.");
+-        }
+-        input.close();
+-    }
+-}
+-
+-
+-//import java.util.Scanner;	This allows us to use the Scanner class to take user input.
+-//public class DaySwitchExample {	Start of your Java class named DaySwitchExample.
+-//    public static void main(String[] args) {	This is the main method where your program starts running.
+-//        Scanner input = new Scanner(System.in);	Creates a Scanner object named input to read input from keyboard.
+-//                System.out.print("Enter a number (1 to 7): ");	Prints a message asking the user to enter a number.
+-//        int day = input.nextInt();	Reads an integer from user and stores it in variable day.
+-//        switch (day) {	Begins the switch block to check value of day.
+-//            case 1: to case 7:	If day is 1, it prints "Monday", if 2 → "Tuesday", etc.
+-//                break;	Stops checking further cases once a match is found.
+-//            default:	If none of the above matches, this runs (used for invalid input).
+-//                input.close();	Closes the input scanner to free memory.
+-
+-
+-//Use switch when there are multiple exact values to check
+-//
+-//Each case checks a specific value
+-//
+-//break prevents checking the next case
+-//
+-//default is like else
+\ No newline at end of file
